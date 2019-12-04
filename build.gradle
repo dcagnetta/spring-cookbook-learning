@@ -1,3 +1,4 @@
+/* Applies to all projects in the solution */
 subprojects {
 
     apply plugin: 'java'
@@ -5,11 +6,16 @@ subprojects {
     group = 'co.za.codeboss'
     version = '0.0.1-SNAPSHOT'
 
-    sourceCompatibility = '11'
-    targetCompatibility = '11'
+    sourceCompatibility = 11
+    targetCompatibility = 11
 
     repositories {
         mavenCentral()
+    }
+
+    dependencies {
+        compileOnly  'org.projectlombok:lombok:1.18.10'
+        annotationProcessor 'org.projectlombok:lombok:1.18.10'
     }
 }
 

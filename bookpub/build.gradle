@@ -1,3 +1,7 @@
+// https://github.com/exercism/support/issues/73#issuecomment-548974383
+// https://intellij-support.jetbrains.com/hc/en-us/community/posts/360004383639-How-to-add-Gradle-options
+
+
 plugins {
     id 'org.springframework.boot' version '2.2.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
