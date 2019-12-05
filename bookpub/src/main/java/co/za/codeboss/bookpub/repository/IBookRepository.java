@@ -7,4 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IBookRepository extends CrudRepository<Book, Long> {
+    /**
+    * Convention based SQL queries
+     */
+    Book findBookByIsbn(String isbn);
+    Book findByTitleIgnoringCase(String title);
 }

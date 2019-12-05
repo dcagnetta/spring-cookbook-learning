@@ -11,9 +11,9 @@ public class Book {
     @Id
     @GeneratedValue
     private Long id;
-    private String isbn;
-    private String title;
-    private String description;
+    @NonNull private String isbn;
+    @NonNull private String title;
+    @NonNull private String description;
     @ManyToOne
     private Author author;
 

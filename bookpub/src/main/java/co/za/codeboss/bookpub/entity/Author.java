@@ -8,13 +8,13 @@ import java.util.List;
 @Setter
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor // This adds a constructor for all fields that are either @NonNull or final.
 public class Author {
     @Id
     @GeneratedValue
     private Long id;
-    private String firstName;
-    private String lastName;
+    @NonNull private String firstName;
+    @NonNull private String lastName;
     @OneToMany(mappedBy = "author")
     private List<Book> books;
 }
