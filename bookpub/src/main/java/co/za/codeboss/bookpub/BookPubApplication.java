@@ -1,5 +1,6 @@
 package co.za.codeboss.bookpub;
 
+import co.za.codeboss.bookbupstarter.dbcount.EnableDbCounting;
 import co.za.codeboss.bookpub.repository.IBookRepository;
 import co.za.codeboss.bookpub.properties.CustomProperties;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,7 @@ import org.springframework.scheduling.annotation.*;
 @SpringBootApplication
 @EnableScheduling
 @EnableConfigurationProperties(CustomProperties.class)
+@EnableDbCounting
 public class BookPubApplication {
     /**
      * Configures IoC
@@ -22,9 +24,6 @@ public class BookPubApplication {
     StartupRunner scheduleRunner() {
         return new StartupRunner();
     }
-
-    @Autowired
-    private IBookRepository bookRepository;
 
     public static void main(String[] args) {
         log.info("Simple log statement with inputs {}, {} and {}", 1, 2, 3);

@@ -11,5 +11,5 @@ import org.springframework.validation.annotation.Validated;
 public class CustomProperties {
 
     private String welcomeMessage;
-
+    
 }
