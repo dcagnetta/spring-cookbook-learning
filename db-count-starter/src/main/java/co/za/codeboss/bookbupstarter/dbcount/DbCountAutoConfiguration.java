@@ -6,13 +6,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
+import java.util.List;
 
 @Configuration
 public class DbCountAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    public DbCountRunner dbCountRunner(Collection<CrudRepository> repositories) {
+    public DbCountRunner dbCountRunner(List<CrudRepository> repositories) {
         return new DbCountRunner(repositories);
     }
 
