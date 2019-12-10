@@ -3,4 +3,5 @@ rootProject.name = 'spring-cookbook-learning'
 // sub projects
 include 'bookpub'
 include 'db-count-starter'
+include 'mongodb'
 

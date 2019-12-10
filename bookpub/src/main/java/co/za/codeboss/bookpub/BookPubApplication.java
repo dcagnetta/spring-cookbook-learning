@@ -3,6 +3,7 @@ package co.za.codeboss.bookpub;
 import co.za.codeboss.bookbupstarter.dbcount.EnableDbCounting;
 import co.za.codeboss.bookpub.repository.IBookRepository;
 import co.za.codeboss.bookpub.properties.CustomProperties;
+import co.za.codeboss.mongodb.EnableMongoDB;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,7 @@ import org.springframework.scheduling.annotation.*;
 @EnableScheduling
 @EnableConfigurationProperties(CustomProperties.class)
 @EnableDbCounting
+@EnableMongoDB
 public class BookPubApplication {
     /**
      * Configures IoC
